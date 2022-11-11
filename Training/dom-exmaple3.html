@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flag</title>
+</head>
+<body>
+    <label for="country">Select Option</label>
+    <select name="" id="country" onchange="displayFlag(value)">
+        <option value="in" selected>India</option>
+        <option value="eng">England</option>
+        <option value="pak">Pakistan</option>
+        <option value="ger">Germany</option>
+    </select>
+
+    <div id="imgDiv">
+    
+    </div>
+
+    <script>
+        let selectOp = document.getElementById("country");
+        let selectedCountry;
+
+        let imgDiv = document.getElementById("imgDiv");
+        
+        // imgDiv.style.border = "5px solid black";
+
+        const image = document.createElement('img');
+        image.src = "assets/images/india.png";
+        image.width = 150;
+        image.style.height = "100px";
+        image.style.border = "2px solid black";
+
+        imgDiv.appendChild(image);
+
+
+        function displayFlag(value)
+        {
+            if(value == "in")
+            {
+                selectedCountry = "India";
+                image.src = "assets/images/india.png";
+            }
+            else if(value == "pak")
+            {
+                selectedCountry = "Pakistan";
+                image.src = "assets/images/pakistan.png";
+            }
+            else if(value == "eng")
+            {
+                selectedCountry = "England";
+                image.src = "assets/images/england.png";
+            }
+            else
+            {
+                selectedCountry = "Germany";
+                image.src = "assets/images/germany.png";
+            }
+            // alert("Other option selected: " + selectedCountry);
+        }
+
+
+    </script>
+</body>
+</html>
