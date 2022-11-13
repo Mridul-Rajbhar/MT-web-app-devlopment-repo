@@ -23,7 +23,7 @@ function multiplyNumbers(num1)
         console.log("res = ",res);
     }
 
-    console.log("res = ",res);
+//    console.log("res = ",res);
     console.log("firstname = ", firstname);
     console.log("x = ", x);
     console.log("value of multilpe",multiple);
@@ -34,8 +34,8 @@ function multiplyNumbers(num1)
 
 var result = multiplyNumbers(10);
 console.log("result = ", result);
-console.log("res = ", res);
+//console.log("res = ", res);
 console.log("firstname = ", firstname);
 console.log("x = ", x);
-console.log("value of multilpe",multiple);
-console.log("num1 = ", num1);
+//console.log("value of multilpe",multiple);
+//console.log("num1 = ", num1);
