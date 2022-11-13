@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggleButton" value="show" onclick="toggle()">Show</button>
+
+    <script>
+        const myButton = document.getElementById("toggleButton");
+        console.log(myButton);
+        function toggle()
+        {
+            if(myButton.value == "show")
+            {
+                myButton.textContent = "Hide";
+                myButton.style.border = "3px solid red";
+                myButton.value = "hide";
+            }
+            else
+            {
+                myButton.textContent = "Show";
+                myButton.style.border = "";
+                myButton.value = "show"
+            }
+        }
+    </script>
+</body>
+</html>

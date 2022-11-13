@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="abc" id="btn">
+    <script>
+     var x = document.getElementById("btn");
+     var y = x;
+      console.log(typeof x);
+      console.log(typeof y);
+      console.log("value of the x object: ", x);
+      var n1 = x.value;
+
+      if(n1 == 'xyz')
+        console.log("values matches");
+      else
+        console.log("value not matches");
+
+        
+    </script>
+</body>
+</html>
