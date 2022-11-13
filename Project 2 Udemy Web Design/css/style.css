@@ -2,6 +2,7 @@ body{
     margin: 0;
     height: 3000px;
     font-family: 'Heebo', sans-serif;
+    padding-top: 50px;
 }
 
 ul{
@@ -15,6 +16,10 @@ header{
     /* display: flex;
     justify-content: space-between; */
     height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     /* align-items: center; */
 }
 
@@ -27,6 +32,16 @@ header .container{
 
 header .logo{
     display: inline-block;
+    font-size: 27px;   
+}
+
+header .logo .blue-dot
+{
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
 }
 
 header nav{
@@ -58,5 +73,40 @@ header
 .container{
     max-width: 980px;
     margin: auto;
-    background-color: yellow;
+}
+
+section.hero{
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    background-color: #727272;
+    height: 100%;
+}
+
+.hero-img img{
+    width: 50%;
+    /* position: absolute; */
+}
+
+section .hero-content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+section .hero-content .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero-content h1{
+
 }
