@@ -37,4 +37,36 @@
 //Reuse The Parameters names
 
 
+// function myFunction(a, b){
+//     console.log(a, b);
+// }
 
+// function myFunction2(a, b){
+//     console.log(a, b);
+// }
+
+// const a  = true;
+// const b = null;
+
+// myFunction(2,3);
+// myFunction2(a, b);
+
+
+
+// ----------- Exmaple 5 -----------//
+
+// function sum (a, b){
+//     return a + b;
+// }
+// sum(10, 15);
+
+
+// *************Example 6 **************//
+
+// function myFunction(a)
+// {
+//     console.log(a);
+//     return a;
+//     console.log(a);
+// }
+// myFunction(10);

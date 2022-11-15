@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var acc1 = {accountId: "ACC1234",
+                    holder: "john",
+                    balance: 78333};
+        console.log(acc1);
+
+        function Employee(id, name, sal){
+            this.id = id;
+            this.name = name;
+            this.sal = sal;
+        }
+
+        var e1 = new Employee(10, "john", 100000);
+        console.log(e1);
+        console.log("object details: id: " 
+        + e1.id + " name: " + e1.name + " salary: " + e1.sal);
+
+        var e2 = new Employee(20, "jill", 993933);
+        console.log(e2);
+    </script>    
+</body>
+</html>

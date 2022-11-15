@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="introPara">Hello World</p>
+    <input type="button" id="btnDis" value="click" style="border: 2px solid red;" onclick="disableBtn()" disabled>
+
+    <input type="button" id="btn" value="click button style" onclick="btnfunction()" >
+
+    <script>
+        function btnfunction(){
+            var btnElement = document.getElementById('btnDis');
+            btnElement.disabled = false;
+            console.log("button value: ", btnElement.value);
+            var paraElement = document.getElementById('introPara');
+            paraElement.innerHTML = "BYE";
+        }
+
+        function disableBtn()
+        {
+            var btnElement = document.getElementById('btnDis');
+            btnElement.disabled = true;
+            var paraElement = document.getElementById('introPara');
+            paraElement.innerHTML = "Hello World!"; 
+        }
+    </script>
+</body>
+</html>

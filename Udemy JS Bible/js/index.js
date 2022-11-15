@@ -64,12 +64,36 @@ console.log(anotherObject);
 
 // Video 34: Challenge
 
-var myVariable  = null;
-console.log(typeof myVariable);
+// var myVariable  = null;
+// console.log(typeof myVariable);
 
-myVariable = 15;
-console.log(typeof myVariable);
+// myVariable = 15;
+// console.log(typeof myVariable);
 
-myVariable = false;
-console.log(typeof myVariable);
+// myVariable = false;
+// console.log(typeof myVariable);
+ 
+
+/**
+ * Example 2
+ */
+
+// const myFunction  = function () {}
+// console.log(myFunction());
+// console.log(myFunction);
+
+/**
+ * Example 3: Callback Function
+ */
+
+// setTimeout(function(){
+//     console.log("delayed message");
+// },5000);
+
+/**
+ * Example 4: Callback Function
+ */
+
+// setInterval(function()
+// {console.log("Message logged")},3000);
 
