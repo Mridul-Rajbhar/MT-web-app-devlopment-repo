@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="function2.js"></script>
+    <!-- <script src="function2.js"></script> -->
+    <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="card" style="width: 18rem;">
+        <img src="car.jpg" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Mercedes</h5>
+            <p id="info" class="card-text" style="visibility: hidden;">This is the car. 
+                Mercedes-Benz, commonly referred to 
+                as Mercedes and sometimes as Benz, is 
+                a German luxury and commercial vehicle 
+                automotive brand established in 1926.</p>
+            <button id="info-btn" onclick="showInfo()" class="btn btn-primary">More Info</button>
+        </div>
+    </div>
+
+    <script>
+        let info_btn = document.getElementById("info-btn");
+        let info = document.getElementById("info");
+        function showInfo(){
+            info.style.visibility = "visible";
+        }   
+    </script>
 </body>
 </html>
