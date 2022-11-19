@@ -1,0 +1,16 @@
+{
+"compilerOptions": {
+ /* Language and Environment */
+ "target": "ES2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+"module": "commonjs",/* Specify what module code is generated. */
+// "strict": true,
+"outDir": "./build",
+// "strictNullChecks": true,
+//"noImplicitAny": true,
+//"removeComments": true,
+ //"preserveConstEnums": true,
+ "watch": true
+ }, 
+  "include": ["src", "Assignments","Udemy Understanding TS"], 
+}
+

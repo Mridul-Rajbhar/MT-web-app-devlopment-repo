@@ -1,0 +1,16 @@
+{
+  "name": "typescriptprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mridul",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "npx": "^10.2.2",
+    "typescript": "^4.8.4"
+  }
+}

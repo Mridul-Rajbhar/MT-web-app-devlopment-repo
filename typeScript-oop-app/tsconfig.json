@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+/* Language and Environment */
+ "target": "ES5", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+ "module": "commonjs",/* Specify what module code is generated. */
+//  "strict": true,
+ "outDir": "./build",
+//  "strictNullChecks": true,
+ "noImplicitAny": true,
+  "watch": true
+  },
+  "include":["src"]
+}
