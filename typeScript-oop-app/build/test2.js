@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.printPerson = void 0;
-var test1_1 = require("./test1");
+const test1_1 = require("./test1");
 console.log("test 2");
 var x1 = test1_1.x;
 console.log(x1);

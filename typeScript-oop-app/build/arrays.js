@@ -1,19 +1,19 @@
-var arr = [4, 3, 5, 3, 5, 23, 7, 4];
-arr.forEach(function (element) {
+let arr = [4, 3, 5, 3, 5, 23, 7, 4];
+arr.forEach(element => {
     element = 1;
 });
-arr.forEach(function (element) {
+arr.forEach(element => {
     console.log(element);
 });
-var arr2 = [4, 5, 6, 7, 8];
-var sqrArr = arr2.map(function (element) { return element * element; });
+let arr2 = [4, 5, 6, 7, 8];
+let sqrArr = arr2.map(element => element * element);
 console.log(sqrArr);
-var persons = [
+const persons = [
     { firstname: "Malcom", lastname: "Reynolds" },
     { firstname: "Kaylee", lastname: "Frye" },
     { firstname: "Jayne", lastname: "Cobb" }
 ];
-var fullName = persons.map(function (item) { return [item.firstname, item.lastname].join(" "); });
+let fullName = persons.map(item => [item.firstname, item.lastname].join(" "));
 console.log(fullName);
-var fruits = ['Mango', 'Apple', 'Banana'];
+let fruits = ['Mango', 'Apple', 'Banana'];
 console.log(fruits.join(", ").toString());
