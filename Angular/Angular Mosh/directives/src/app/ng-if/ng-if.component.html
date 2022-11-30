@@ -1,0 +1,16 @@
+<!-- <div *ngIf="courses.length > 0;then courseList else noCourses"></div>
+<ng-template #courseList>
+    List Of Courses
+</ng-template>
+<ng-template #noCourses>
+    No Courses Yet
+</ng-template> -->
+
+<!-- Hidden Property -->
+
+<div [hidden]="courses.length == 0">
+    List Of Courses
+</div>
+<div [hidden]="courses.length > 0">
+    No Courses Yet
+</div>

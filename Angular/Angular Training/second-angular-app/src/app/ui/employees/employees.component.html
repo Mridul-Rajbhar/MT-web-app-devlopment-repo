@@ -1,0 +1,11 @@
+<p>employees works!</p>
+<hr>
+<img [src]="imageUrl" width="50px" height="50px">
+<br>
+<button (click)="buttonHandler()" >{{buttonStatus}}</button>
+<br>
+
+<input #myInput (keyup)="showInput(myInput.value)"  type="text">
+<p [ngStyle]= "{'background-color': userInput=='Mastek'?'blue':'yellow'}"  >{{userInput}}</p>
+
+<app-employee-details></app-employee-details>
