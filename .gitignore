@@ -47,5 +47,8 @@ Thumbs.db
 
 # TypeScript Projects
 
+package-lock.json
 */package-lock.json
 */.package-lock.json
+
+bootstrap-4.5.3-dist
