@@ -1,0 +1,52 @@
+<h2>Registration Form</h2>
+<form #f="ngForm">
+    <div class="form-group">
+        <input 
+        required
+        ngModel name="firstName" 
+        #firstName="ngModel" 
+        id="firstName" 
+        type="text" 
+        class="form-control"
+        placeholder="First Name">
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors && firstName.errors['required']">
+                Empty</div>
+        </div>
+
+        <input 
+        required 
+        ngModel name="lastName" 
+        #lastName="ngModel" 
+        id="lastName" 
+        type="text" 
+        class="form-control"
+        placeholder="Last Name">
+        <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+            <div *ngIf="lastName.errors && lastName.errors['required']">
+                Empty</div>
+        </div>
+
+        <input 
+        required 
+        ngModel name="email"
+        email 
+        #email="ngModel" 
+        id="email" 
+        type="email" 
+        class="form-control"
+        placeholder="mail@example.com"
+        >
+        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+            <div *ngIf="email.errors && email.errors['required']">
+                Empty</div>
+            <div *ngIf="email.errors && email.errors['email']">
+                Invalid</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" (click)="f.resetForm();">Reset</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Register</button>
+    </div>
+</form>

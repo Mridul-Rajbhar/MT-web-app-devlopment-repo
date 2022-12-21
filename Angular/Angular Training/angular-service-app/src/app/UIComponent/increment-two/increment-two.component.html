@@ -1,0 +1,17 @@
+<div class="panel panel-info">
+    <p>{{counter}}</p>
+    
+    <button type="submit" 
+        (click)="incrementValue(counter)"
+        class="btn btn-primary"
+        >Increment
+    </button>
+</div>
+<br>
+<h5>Length of Names</h5>
+
+<ul>
+    <li *ngFor="let nameLength of names | length">
+        {{nameLength}}
+    </li>
+</ul>

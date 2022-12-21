@@ -9,6 +9,7 @@ type courseType = {id: number, name: string}
 })
 export class NgForComponent {
   courses: courseType[] = [];
+  // noCourses: string = "no courses exist";
 
   onAdd(){
     this.courses.push({
@@ -31,5 +32,9 @@ export class NgForComponent {
         {id: 2, name: 'Course2'},
         {id: 3, name: 'Course3'}
       ];
+  }
+
+  trackCourse(index: number, course: courseType){
+    return course? course.id : undefined;
   }
 }

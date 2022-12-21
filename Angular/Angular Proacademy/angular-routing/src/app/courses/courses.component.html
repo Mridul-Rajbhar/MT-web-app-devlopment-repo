@@ -1,0 +1,5 @@
+<div *ngFor="let course of courses">
+   <p> ID: {{course.id}} </p>
+   <p> Name: {{course.name}} </p>
+   <button class=".btn" routerLink="Course/{{course.id}}" >View More</button>
+</div>

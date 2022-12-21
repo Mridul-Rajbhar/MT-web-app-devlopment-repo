@@ -1,0 +1,18 @@
+<div>
+  <label>
+    DOB:
+    <input type="date" #dobInput (blur)="calculateAge()">
+  </label>
+</div>
+
+<div>
+  <label>
+    Age:
+    <input type="text" #ageInput>
+  </label>
+</div>
+
+<app-demo>
+
+</app-demo>
+{{demo.sayHello()}}

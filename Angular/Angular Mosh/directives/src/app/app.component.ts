@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives';
+  canSave = true;
+
+  task = {
+    assignable: null
+  }
 }

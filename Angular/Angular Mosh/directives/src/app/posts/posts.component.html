@@ -1,0 +1,21 @@
+
+<input type="text" (keyup.enter)="postData(input)" #input name="" id="">
+
+<h4 *ngIf="errorMessage != null">
+    {{errorMessage}}
+</h4>
+
+<ul class="list-group">
+    <li *ngFor="let post of posts" class="list-group-item">
+        <button class="btn btn-primary btn-sm"
+        (click)="updatePost(input, post)">
+            update
+        </button>
+
+        <button class="btn btn-danger btn-sm"
+        (click)="deletePost(post)">
+            delete
+        </button>
+        {{post | json}}
+    </li>
+</ul>

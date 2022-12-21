@@ -1,0 +1,33 @@
+<div class="deletePermission" [hidden]="hideDeletePanel">
+    <div class="deletePanel">
+        <p>Do you really want to delete.</p>
+        <button class="btn btn-danger" (click)="deleteEmployee(); hideDeletePanel = true;">Yes</button>
+        <button class="btn btn-primary" (click)="hideDeletePanel = true;" >No</button>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee Number</th>
+            <th>Name</th>
+            <th>Date Of Joining</th>
+            <th>Profile Pic</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <th>{{employee.id}}</th>
+            <td>{{employee.firstName + " "}}{{employee.lastName}}</td>
+            <td>{{employee.dateOfJoining}}</td>
+            <td class="profile-pic-area"> 
+                <div class="profile-pic-frame">
+                    <img src="{{employee.photo}}" class="profile-pic" alt=""> 
+                </div>
+            </td>
+            <td><button class="btn btn-primary" routerLink="EmployeeDetails/{{employee.id}}">View Details</button></td>
+            <td><button class="btn btn-danger" (click)="employeeChosenToDelete = employee; hideDeletePanel = false;" >Delete</button></td>
+        </tr>
+    </tbody>
+</table>

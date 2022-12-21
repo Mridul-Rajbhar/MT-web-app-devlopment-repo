@@ -1,0 +1,11 @@
+<div class="panel panel-info">
+    <p>{{counter | square}}</p>
+    <p>{{counter | exponential:3}}</p>
+    
+    <button type="submit" 
+        (click)="incrementValue(counter)"
+        class="btn btn-primary"
+        >Increment
+    </button>
+</div>
+<br>

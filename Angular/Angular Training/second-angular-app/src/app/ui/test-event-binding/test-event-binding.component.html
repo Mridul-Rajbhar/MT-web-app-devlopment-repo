@@ -1,0 +1,27 @@
+<p>test-event-binding works!</p>
+
+<hr>
+<img [src]="imageUrl" width="50px" height="50px">
+<br>
+<button (click)="buttonHandler()" >{{buttonStatus}}</button>
+<br>
+
+<input #myInput (keyup)="showInput(myInput.value)"  type="text">
+<p [ngStyle]= "{'background-color': userInput=='Mastek'?'blue':'yellow'}"  >{{userInput}}</p>
+
+
+<input type="text" (change)="showInputEvent($event)" #z>
+<p>{{userInputEvent}}</p>
+
+
+<h1 #x>my employees heading</h1>
+<p >element x: {{x.textContent}}
+    <br>
+    element y: {{y.textContent}}
+</p>
+
+<button #y value="Test">test</button>
+<input type="text" #y (click)="updateHeader(x.innerHTML)">
+
+<h1>{{z.value}}</h1>
+<h1>{{userInputEvent}}</h1>

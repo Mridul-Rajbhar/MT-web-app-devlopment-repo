@@ -1,0 +1,9 @@
+.content{
+    min-height: 500px;
+    /* border: 2px solid red; */
+}
+app-footer{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}

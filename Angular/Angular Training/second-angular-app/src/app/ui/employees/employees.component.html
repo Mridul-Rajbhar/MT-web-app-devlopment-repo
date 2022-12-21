@@ -1,11 +1,53 @@
 <p>employees works!</p>
-<hr>
-<img [src]="imageUrl" width="50px" height="50px">
-<br>
-<button (click)="buttonHandler()" >{{buttonStatus}}</button>
-<br>
+<ul>
+    <li>{{names[0]}}</li>
+    <li>{{names[1]}}</li>
+    <li>{{names[2]}}</li>
+    <li>{{names[3]}}</li>
+</ul>
 
-<input #myInput (keyup)="showInput(myInput.value)"  type="text">
-<p [ngStyle]= "{'background-color': userInput=='Mastek'?'blue':'yellow'}"  >{{userInput}}</p>
+<ul>
+    <li *ngFor="let name of names">
+        {{name}}
+    </li>
+</ul>
+
+<ul *ngFor="let name of names">
+    <li>
+        {{name}}
+    </li>
+</ul>
+
+<select>
+    <option *ngFor="let name of names" value={{name}}>
+        {{name}}
+    </option>
+</select>
+
+
+<table class="table table-bordered table-hover" style="text-align: center">
+    <thead class="bg-success" style="color: white; font-family:'Heebo';">
+        <tr>
+            <th>Employee Number</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; even as isEven"
+        [ngClass]="isEven ? 'table-active': ''"
+        >
+            <th>{{employee.employeeNumber | number}}</th>
+            <td>{{employee.name | sentenceCase}}</td>
+            <td>{{employee.date | date:'shortDate'}}</td>
+            <td>{{employee.salary | currency:"INR":true}}</td>
+            <td>{{employee.department | uppercase}}</td>
+            <td><img src={{employee.imageUrl}} width="50px" height="60px" alt=""></td>
+        </tr>
+    </tbody>
+</table>
 
 <app-employee-details></app-employee-details>

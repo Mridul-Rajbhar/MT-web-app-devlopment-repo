@@ -1,0 +1,35 @@
+<h1>My CheckList</h1>
+<form #f="ngForm" action="">
+    <p> {{checked}} of {{items.length}} remaining [ <a (click)="hideCheckItems(f)">Archive</a> ]</p>
+    <ul>
+        <li *ngFor="let item of items">
+            <input ngModel #{{item}}
+                class="form-check-input" 
+                type="checkbox" 
+                name="{{item}}" 
+                id="{{item}}"
+                (change)="countItems(f)"
+                >
+            <label 
+                class="form-check-label" 
+                for="{{item}}"
+                [ngStyle]="{'text-decoration-line':(f.value[item] == true)?'line-through':''}" 
+                >
+                {{item}}
+                
+            </label>
+            <!-- <p>{{f.value[item] | json}}</p> -->
+        </li>
+
+        <input  #newItem 
+            type="text" 
+            name="newItem" 
+            id="newItem"
+            placeholder="add new item here">
+        <button class="btn btn-primary" (click)="addItem(newItem)">Add Item</button>
+    </ul>
+    <!-- <p>{{f.value | json}}</p> -->
+</form>
+
+
+<!-- [ngStyle]="{'text-decoration-line':(f.value[item] == true)?'line-through':''}" -->

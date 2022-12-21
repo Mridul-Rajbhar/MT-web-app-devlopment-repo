@@ -1,0 +1,7 @@
+.active{
+    background-color: grey;
+    color: aliceblue;
+}
+.active > a{
+    color: white;
+}

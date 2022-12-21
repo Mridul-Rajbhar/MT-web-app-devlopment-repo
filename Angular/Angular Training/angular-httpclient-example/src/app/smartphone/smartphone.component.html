@@ -1,0 +1,22 @@
+<h3>SmartPhone</h3>
+<hr>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let smartPhone of smartphones">
+            <td scope="row">{{smartPhone.id}}</td>
+            <td>{{smartPhone.name}}</td>
+            <td>{{smartPhone.desc}}</td>
+            <td>{{smartPhone.price}}</td>
+            <td>{{smartPhone.updated | date}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+.deletePermission{
+    z-index: 1;
+    border: solid 2px red;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deletePanel{
+    border-radius: 10%;
+}
+
+.profile-pic-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profile-pic-frame{
+    width: 20%;   
+    height: 20%;
+    border: solid black 2px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.profile-pic{
+    width: 100%;
+}
+
+th, td{
+    text-align: center;
+}
