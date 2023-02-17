@@ -37,3 +37,31 @@
 th, td{
     text-align: center;
 }
+
+.functionality-container{
+    display: flex;
+    /* flex */
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid red;
+    height: 10%;
+}
+
+.sub-functionality-container{
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-end{
+    justify-content: flex-end;
+}
+
+.emp-functionality{
+    margin: 0.5% 1%;
+}
+
+.btn-search{
+    margin-right: 0.5%;
+}

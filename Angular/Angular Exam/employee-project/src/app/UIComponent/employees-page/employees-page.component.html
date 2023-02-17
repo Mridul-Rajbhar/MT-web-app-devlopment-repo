@@ -5,6 +5,18 @@
         <button class="btn btn-primary" (click)="hideDeletePanel = true;" >No</button>
     </div>
 </div>
+<div class="functionality-container">
+    <div class="sub-functionality-container">
+        <button class="btn btn-primary emp-functionality" (click)="sortAscending()">Ascending</button>
+        <button class="btn btn-primary emp-functionality" (click)="sortDescending()">Descending</button>        
+    </div>
+
+    <div class="sub-functionality-container flex-end">
+        <input type="text" class="emp-functionality btn-search" [(ngModel)]="employeeSearch"
+        #ctrl="ngModel" name="searchEmployee" (keyup)="searchEmployee()" placeholder="Search">
+    </div>
+</div>
+{{ctrl.value}}
 <table class="table">
     <thead>
         <tr>
@@ -17,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr *ngFor="let employee of employeesView">
             <th>{{employee.id}}</th>
             <td>{{employee.firstName + " "}}{{employee.lastName}}</td>
             <td>{{employee.dateOfJoining}}</td>

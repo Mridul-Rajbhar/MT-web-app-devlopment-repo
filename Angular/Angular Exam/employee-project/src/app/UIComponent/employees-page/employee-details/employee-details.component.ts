@@ -1,5 +1,5 @@
 import { employee} from './../../../DataTypes/datatypes';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EmployeesProjectService } from 'src/app/Services/employees-project.service';
 

@@ -12,6 +12,7 @@ import { HomeComponent } from './UIComponent/home/home.component';
 import { EmployeesPageComponent } from './UIComponent/employees-page/employees-page.component';
 import { EmployeeDetailsComponent } from './UIComponent/employees-page/employee-details/employee-details.component';
 import { EmployeeFormComponent } from './UIComponent/employees-page/employee-form/employee-form.component';
+import { EmployeeFormIdValidationDirective } from './Directives/employee-form-id-validation.directive';
 
 
 const appRoutes: Routes = [
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   {path: "Home", component: HomeComponent },
   {path: "EmployeesPage", component: EmployeesPageComponent },
   {path: "EmployeesPage/EmployeeForm", component: EmployeeFormComponent },
-  {path: 'EmployeesPage/EmployeeDetails/:employeeId', component: EmployeeDetailsComponent}
+  {path: 'EmployeesPage/EmployeeDetails/:employeeId', component: EmployeeDetailsComponent},
+  {path: '**', redirectTo: 'Home', pathMatch: 'full'}
 ]
 
 @NgModule({
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
     HomeComponent,
     EmployeeDetailsComponent,
     EmployeesPageComponent,
-    EmployeeFormComponent
+    EmployeeFormComponent,
+    EmployeeFormIdValidationDirective
   ],
   imports: [
     BrowserModule,

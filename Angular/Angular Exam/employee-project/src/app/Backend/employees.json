@@ -1,3 +1,31 @@
 {
-  "employees": []
+  "employees": [
+    {
+      "id": 109,
+      "photo": "/assets/images/male.jpg",
+      "firstName": "Raunak",
+      "lastName": "Yadav",
+      "dateOfJoining": "2022-12-14",
+      "gender": "male",
+      "projectAssigned": "Python"
+    },
+    {
+      "id": 1,
+      "photo": "/assets/images/male.jpg",
+      "firstName": "Kaustubh",
+      "lastName": "Gawade",
+      "dateOfJoining": "2022-11-03",
+      "gender": "male",
+      "projectAssigned": "IPF"
+    },
+    {
+      "id": 11,
+      "photo": "/assets/images/male.jpg",
+      "firstName": "Mridul",
+      "lastName": "Rajbhar",
+      "dateOfJoining": "2023-02-09",
+      "gender": "male",
+      "projectAssigned": "IPF"
+    }
+  ]
 }

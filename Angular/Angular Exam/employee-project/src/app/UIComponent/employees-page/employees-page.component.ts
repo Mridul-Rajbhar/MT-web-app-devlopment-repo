@@ -10,8 +10,10 @@ import { employee } from 'src/app/DataTypes/datatypes';
 export class EmployeesPageComponent {
 
   hideDeletePanel: boolean = true;
-  employees: employee[] = [];
+  employeesView: employee[] = [];
+  private employees: employee[] = [];
   employeeChosenToDelete: employee;
+  employeeSearch : string = "";
   private _service: EmployeesProjectService;
 
   constructor(service: EmployeesProjectService){
@@ -22,8 +24,27 @@ export class EmployeesPageComponent {
     this._service.getEmployees().subscribe(
       (response: any)=>{
         this.employees = response;
+        this.employeesView = this.employees;
       }
     )
+  }
+
+  public sortAscending(){
+    console.log("ascending");
+    this.employeesView.sort((a, b)=> new Date(a.dateOfJoining).getTime() - new Date(b.dateOfJoining).getTime());
+  }
+
+  public sortDescending(){
+    console.log("descending");
+    this.employeesView.sort((a, b)=> new Date(b.dateOfJoining).getTime() - new Date(a.dateOfJoining).getTime());
+  }
+
+  public searchEmployee(){
+    this.employeesView=[];
+    this.employees.forEach(employee => {
+      if((employee.firstName+ " " + employee.lastName).toLowerCase().includes(this.employeeSearch.toLowerCase()))
+        this.employeesView.push(employee);
+    });
   }
 
   public deleteEmployee(){
@@ -33,6 +54,10 @@ export class EmployeesPageComponent {
         console.log(response);
         let index: number = this.employees.indexOf(this.employeeChosenToDelete);
         this.employees.splice(index,1);
+        
+        let indexEmployeeView: number = this.employeesView.indexOf(this.employeeChosenToDelete);
+        this.employeesView.splice(index,1);
+        
       },
       (error)=>{
         console.log(error);
